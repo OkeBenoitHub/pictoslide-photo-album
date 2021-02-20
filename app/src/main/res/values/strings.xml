@@ -1,0 +1,198 @@
+<resources>
+    <string name="app_name">Pictoslide</string>
+    <string name="app_name_label" translatable="false">Pictoslide</string>
+    <string name="settings">Settings</string>
+
+    <string name="go_to_albums_text">Go to albums</string>
+    <string name="albums_fragment_label">Albums</string>
+    <string name="home_fragment_label">Home</string>
+
+    <string name="package_name_text" translatable="false">www.pictoslide.com</string>
+    <string name="wifi_enabled_text" translatable="false">WIFI</string>
+    <string name="mobile_data_enabled_text" translatable="false">MOBILE</string>
+    <string name="No_internet_available_text">No internet connection!</string>
+    <string name="about_head_text">Create photo albums for special\nmoments in your life!</string>
+    <string name="pictoslide_helps_you_head_text">Pictoslide helps you:</string>
+    <string name="about_app1_text">Customize your albums with music and share them with friends and family.</string>
+    <string name="about_app2_text">Organize your albums by categories ranging from events, places and people.</string>
+    <string name="no_content_description" translatable="false">None</string>
+    <string name="albums_button_text">Album Gallery</string>
+    <string name="new_album_button_text">+ New Album</string>
+    <string name="send_feedback_via_text">Send feedback via</string>
+    <string name="send_report_via_text">Send report via</string>
+    <string name="feedback_menu_text">Feedback</string>
+    <string name="report_an_issue_text">Report an issue</string>
+    <string name="share_app_menu_text">Share App</string>
+    <string name="about_app_text">Pictoslide helps you create photo albums for special moments in your life!</string>
+    <string name="share_app_via_text">Share Pictoslide via:</string>
+    <string name="give_us_feedback_text">Give us a feedback</string>
+    <string name="what_went_wrong_text">Tell us what went wrong!!</string>
+    <string name="new_album_label_text">New album</string>
+    <string name="edit_album_label_text">Edit album</string>
+    <string name="my_albums_header_text">My albums</string>
+    <string name="sort_albums_by_button_text">Sort By</string>
+    <string name="no_album_found_label_text">Tap + to create an album</string>
+    <string name="back_button_text">Back</string>
+    <string name="info_fragment_title_text">Info</string>
+    <string name="photos_fragment_title_text">Photos</string>
+    <string name="music_fragment_title_text">Music</string>
+    <string name="view_album_button_text">Preview album</string>
+    <string name="album_name_edit_text">Name</string>
+    <string name="short_description_text">Short description</string>
+    <string name="save_info_button_text">Save Info</string>
+
+    <string name="specify_album_info">Please specify album info</string>
+    <string name="at_least_1_photo">Please add at least 1 photo</string>
+    <string name="at_least_1_music">Please add at least 1 music</string>
+    <string name="no_music_found">No results found!</string>
+    <string name="add_music_to_album_button_text">Add music to album</string>
+    <string name="added_successfully">Music added successfully!</string>
+    <string name="removed_successfully">Music removed successfully!</string>
+    <string name="short_description_error">Specify a short description</string>
+    <string name="categorie_error_text">Please specify a category</string>
+    <string name="at_least_5_characters_error">The album name should be at least 5 characters</string>
+    <string name="empty_album_name_error">Specify the album name</string>
+    <string name="good_now_add_some_photos_and_music_to_the_album">Great! \nAdd some photos and music to the album.</string>
+    <string name="album_info_saved">Album info saved!</string>
+    <string name="no_photos_added_yet_text">Add some photos\nto the album.</string>
+    <string name="edit_photo_activity_label_text">Edit Photo</string>
+    <string name="new_photo_added">New photo added!</string>
+    <string name="photo_removed_text">Photo removed!</string>
+    <string name="save_photo_button_text">Add Photo to Album</string>
+    <string name="close_button_text">Close</string>
+
+    <string name="take_photo_button_text">Take photo</string>
+    <string name="draw_menu_text">Draw</string>
+    <string name="draw_on_photo_menu_text">Draw on photo</string>
+    <string name="tiny_brush_menu_text">Tiny brush</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Select</string>
+    <string name="erase_menu_text">Erase</string>
+    <string name="brush_color_dialog_title_text">Choose a brush color</string>
+    <string name="set_filter_menu_text">Apply filter</string>
+    <string name="choose_filter_effect_text">Choose a filter effect:</string>
+    <string name="insert_text_menu_text">Insert text</string>
+    <string name="specify_text_to_add">Specify the color of the text</string>
+    <string name="text_to_insert_text">Enter a text to insert:</string>
+    <string name="undo_all_changes_menu_text">Undo changes</string>
+    <string name="failed_to_save_image_text">Failed to save Image</string>
+    <string name="ok">Okay</string>
+    <string name="album_category_head_text">Category:</string>
+    <string name="at_home_text">At home</string>
+    <string name="At_work_text">At work</string>
+    <string name="at_gym_text">At the gym</string>
+    <string name="beach_text">Beach</string>
+    <string name="birthday_text">Birthday</string>
+    <string name="party_text">Party</string>
+    <string name="restaurant_text">Restaurant</string>
+    <string name="night_life_text">Nightlife | Bar</string>
+    <string name="travel_text">Travel | Tourist</string>
+    <!--<string name="visit_place_text">Visit place</string>-->
+    <string name="holiday_text">Holiday</string>
+    <string name="funeral_text">Funeral</string>
+    <string name="family_members_text">Family members</string>
+    <string name="girlfriend_text">Girlfriend</string>
+    <string name="boyfriend">Boyfriend</string>
+    <string name="wedding_text">Wedding</string>
+    <string name="other_text">Other</string>
+    <string name="no_music_added_yet_text">Tap + to add some music\nto the album</string>
+    <string name="search_for_youtube_music_edit_text">Search for music</string>
+    <string name="Add_music_to_album_btn">Add music to album</string>
+    <string name="remove_music_from_album_btn">Remove music from album</string>
+    <string name="add_caption_optional_text">Add short caption</string>
+    <string name="try_again_text">Try again!</string>
+    <string name="failed_photo">Failed taking photo!\nTry again.</string>
+    <string name="choose_photo_from_text">Choose a photo from:</string>
+    <string name="no_effect_filter_text">NO EFFECT</string>
+    <string name="auto_fix">AUTO FIX</string>
+    <string name="black_white">BLACK WHITE</string>
+    <string name="brightness">BRIGHTNESS</string>
+    <string name="contrast">CONTRAST</string>
+    <string name="cross_process">CROSS PROCESS</string>
+    <string name="documentary">DOCUMENTARY</string>
+    <string name="due_tone">DUE TONE</string>
+    <string name="fill_light">FILL LIGHT</string>
+    <string name="fish_eye">FISH EYE</string>
+    <string name="flip_horizontal">FLIP HORIZONTAL</string>
+    <string name="flip_vertical">FLIP VERTICAL</string>
+    <string name="grain">GRAIN</string>
+    <string name="gray_scale">GRAY SCALE</string>
+    <string name="negative">NEGATIVE</string>
+    <string name="Rotate">ROTATE</string>
+    <string name="Saturate">SATURATE</string>
+    <string name="sepia">SEPIA</string>
+    <string name="sharpen">SHARPEN</string>
+    <string name="temperature">TEMPERATURE</string>
+    <string name="tint">TINT</string>
+    <string name="vignette">VIGNETTE</string>
+    <string name="save_album_title_text">Album</string>
+    <string name="save_album_confirm_text">Add it to your gallery?</string>
+    <string name="yes_button_text">Yes</string>
+    <string name="no_button_text">No</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="saving_album_to_library">Saving it to gallery</string>
+    <string name="added_to_library_text">Added to your gallery</string>
+    <string name="library_text">Gallery</string>
+    <string name="sort_albums_by_text">Sort albums by</string>
+    <string name="share_app_menu_item_text">Share app</string>
+    <string name="report_an_issue_menu_item_text">Report an issue</string>
+    <string name="feedback_menu_item_text">Feedback</string>
+    <string name="please_wait_text">Please wait \u2022\u2022\u2022</string>
+    <string name="unknown_error_text">An unknown error occurred!</string>
+    <string name="okay_dialog_button_text">OK</string>
+    <string name="cancel_dialog_button_text">Cancel</string>
+    <string name="albums_fragment_title_text">Albums</string>
+    <string name="back_to_library_button_text">Back to gallery</string>
+    <string name="failed_to_play_video_text">Failed to play Youtube video</string>
+    <string name="yesterday_text">Yesterday</string>
+    <string name="days_ago_text">days ago</string>
+    <string name="hours_ago_text">hours ago</string>
+    <string name="hour_ago_text">An hour ago</string>
+    <string name="minutes_ago_text">minutes ago</string>
+    <string name="minute_ago_text">A minute ago</string>
+    <string name="just_now_ago_text">Just now</string>
+    <string name="view_album_menu_text">View album</string>
+    <string name="share_album_menu_text">Share</string>
+    <string name="delete_album_menu_text">Delete</string>
+    <string name="view_all_albums_button">View all albums</string>
+    <string name="no_search_albums_found_tv">No albums found!</string>
+    <string name="find_album_by_name_text">Find an album by name</string>
+    <string name="no_album_found_for_category_label_text">No albums found\nfor this category.</string>
+    <string name="create_new_album_button_text">Create new album</string>
+    <string name="album_library_button_text">Album Gallery</string>
+    <string name="owner_deleted_album_text">The album was deleted by the owner</string>
+    <string name="failed_to_save_album_text">Failed to save album</string>
+    <string name="remove_album_from_library_text">Remove it from your gallery?</string>
+    <string name="removing_album_from_library">Removing it from gallery</string>
+    <string name="album_removed_from_library_text">Removed from gallery</string>
+    <string name="failed_remove_album_library">Failed to remove album.</string>
+    <string name="failed_delete_photos_from_album">Failed to delete photos from album</string>
+    <string name="failed_shared_album_text">Failed to share album</string>
+    <string name="share_album_via_title_text">Share album via:</string>
+    <string name="retrieving_album_data_text">Retrieving album data</string>
+    <string name="failed_perform_operation">Failed to process</string>
+    <string name="app_play_store_link" translatable="false">https://play.google.com/store/apps/details?id=com.pictoslide.www</string>
+    <string name="hey_text">Hey,</string>
+    <string name="about_album_share_1">Click on the link below to view my album:</string>
+    <string name="about_album_share_2">You must have Pictoslide App\ninstalled on your phone.</string>
+    <string name="about_album_share_3">Click the link below to download the android app:</string>
+    <string name="album_library_header_text">Album Gallery</string>
+    <string name="sort_albums_by_category_head_text">Sort albums\nby category</string>
+    <string name="pictoslide_needs_internet_to_play_music">No internet available to play music</string>
+    <string name="loading_music_text">Preparing music \u2022\u2022\u2022</string>
+    <string name="buffering_music_text">Buffering music \u2022\u2022\u2022</string>
+    <string name="failed_retrieve_album_data">Failed to retrieve album data</string>
+    <string name="youtube_api_key_pictoslide" translatable="false">AIzaSyBTmg-2BF01ha5vp3Kt7d-CEKY2DefXpXQ</string>
+    <string name="library_menu_text">Gallery</string>
+
+    <declare-styleable name="MarqueeView">
+        <attr name="speed" format="dimension"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color|reference"/>
+        <attr name="txt_spacing" format="dimension"/>
+        <attr name="txt_radius" format="float"/>
+        <attr name="txt_dx" format="float"/>
+        <attr name="txt_dy" format="float"/>
+        <attr name="text_shadowColor" format="color|reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">@color/colorPrimary</color>
+    <color name="purple_700">@color/colorPrimaryDark</color>
+    <color name="teal_200">@android:color/white</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">@color/colorPrimary</color>
+    <color name="white">#424242</color>
+
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#1b1b1b</color>
+    <color name="colorAccent">#424242</color>
+    <color name="colorPrimaryLight">#6d6d6d</color>
+    <color name="about_content_color">@android:color/darker_gray</color>
+    <color name="default_content_color">#6f79a8</color>
+    <color name="main_bg_color">@android:color/darker_gray</color>
+    <color name="main_head_bg_color">#373737</color>
+    <color name="main_logo_bg_color">#56c8d8</color>
+    <color name="content_header_color">@android:color/darker_gray</color>
+    <color name="main_bg_app_color">#373737</color>
+    <color name="edit_text_color">@color/content_header_color</color>
+    <color name="greenish_bg_color">#b2dfdb</color>
+    <color name="color_new_album">#ffffff</color>
+    <color name="not_found_item_color">@color/edit_text_color</color>
+    <color name="photo_item_bg_color">#eee</color>
+    <color name="line_separator_bg_color">#777</color>
+    <color name="music_publish_date_color">@color/line_separator_bg_color</color>
+    <color name="spinner_bg_color">#ffffff</color>
+    <color name="bottom_black_color">#424242</color>
+</resources>

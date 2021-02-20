@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "847372921229",
+    "firebase_url": "https://pictoslide-6ecb7.firebaseio.com",
+    "project_id": "pictoslide-6ecb7",
+    "storage_bucket": "pictoslide-6ecb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847372921229:android:e00ed9ff5d0aadf6b035c4",
+        "android_client_info": {
+          "package_name": "com.pictoslide.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847372921229-7pde0lt0tbpgc641vscqa40cn4fnnlt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiK_XR_2RKcDC6NQgMXMO1bSRPp5oJ4Tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847372921229-7pde0lt0tbpgc641vscqa40cn4fnnlt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

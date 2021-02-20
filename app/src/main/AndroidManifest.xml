@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pictoslide.www">
+    <!-- App permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_label"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pictoslide"
+        tools:replace="android:label"
+        tools:ignore="AllowBackup">
+        <!-- -->
+        <!-- Album Viewer Activity -->
+        <activity android:name=".activities.AlbumViewerActivity"
+            android:screenOrientation="locked"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        </activity>
+        <!--  -->
+        <!-- Youtube Player Activity -->
+        <activity
+            android:name=".activities.YoutubePlayerActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.Pictoslide" /> <!--  -->
+        <!-- Photo Editor Activity -->
+        <activity
+            android:name=".activities.PhotoEditorActivity"
+            android:label="@string/edit_photo_activity_label_text"
+            android:parentActivityName=".activities.AlbumActivity"
+            android:theme="@style/Theme.Pictoslide"
+            android:screenOrientation="locked">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlbumActivity" />
+        </activity> <!--  -->
+        <!-- Album Activity -->
+        <activity
+            android:name=".activities.AlbumActivity"
+            android:label="Album"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity> <!--  -->
+        <!-- Crop Image Activity -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Theme.Pictoslide" /> <!-- file provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.pictoslide.www.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- Main Activity -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name_label"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="www.pictoslideapp.com"
+                    android:pathPrefix="/albumId"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

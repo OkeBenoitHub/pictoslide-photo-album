@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/music_search_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_head_bg_color"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:id="@+id/searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/music_query_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="none"
+                android:background="@color/white"
+                android:fontFamily="@font/lato_bold"
+                android:hint="@string/search_for_youtube_music_edit_text"
+                android:inputType="text"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/edit_text_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="1dp"
+            app:mrl_rippleColor="@color/colorPrimaryDark"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <ImageView
+                android:id="@+id/searchMusicButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:contentDescription="@string/no_content_description"
+                android:focusable="true"
+                android:padding="4dp"
+                android:src="@drawable/baseline_search_white_18dp"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="1dp"
+            app:mrl_rippleColor="@color/colorPrimaryDark"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true">
+
+            <ImageView
+                android:id="@+id/closeMusicSearchBoxButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:contentDescription="@string/no_content_description"
+                android:focusable="true"
+                android:padding="4dp"
+                android:src="@drawable/baseline_clear_white_18dp"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_results_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBox"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/error_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lato_medium"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="100dp"
+    android:paddingRight="100dp"
+    android:id="@+id/coordinatorLayout"
+    android:background="@color/main_head_bg_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/empty_photos_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/lato_medium"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/no_photos_added_yet_text"
+        android:textColor="@color/not_found_item_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_photos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/open_camera_floating_action_button"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/no_content_description"
+        android:src="@android:drawable/ic_menu_camera"
+        app:backgroundTint="@android:color/white"
+        app:elevation="4dp"
+        app:maxImageSize="34dp"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        app:tint="@color/colorPrimaryDark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/open_phone_gallery_action_button"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/no_content_description"
+        android:src="@android:drawable/ic_menu_gallery"
+        app:backgroundTint="@android:color/white"
+        app:elevation="4dp"
+        app:maxImageSize="34dp"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        app:tint="@color/colorPrimaryDark" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

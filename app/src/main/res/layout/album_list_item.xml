@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:id="@+id/main_album_item"
+    android:orientation="horizontal">
+
+    <com.balysv.materialripple.MaterialRippleLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/album_item_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:mrl_rippleColor="@color/colorPrimaryDark"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/photo_item_bg_color">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/album_thumbnail"
+                    android:layout_width="68dp"
+                    android:layout_height="67dp"
+                    android:contentDescription="@string/no_content_description"
+                    android:padding="1dp"
+                    app:civ_border_color="@android:color/transparent"
+                    app:civ_border_width="2dp" />
+
+                <ProgressBar
+                    android:id="@+id/loader_bar_album"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/album_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/color_new_album"
+                    android:textStyle="bold"
+                    tools:text="Title" />
+
+                <TextView
+                    android:id="@+id/album_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/about_content_color" />
+
+                <TextView
+                    android:id="@+id/album_created_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/about_content_color" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/comboDropButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_round_colored"
+        android:focusable="true"
+        app:mrl_rippleColor="@color/colorPrimaryDark"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleRoundedCorners="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:contentDescription="@string/no_content_description"
+            android:focusable="true"
+            android:padding="4dp"
+            android:src="@drawable/baseline_more_vert_white_24dp"
+            android:textColor="@color/color_new_album"
+            android:textStyle="bold" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+</LinearLayout>

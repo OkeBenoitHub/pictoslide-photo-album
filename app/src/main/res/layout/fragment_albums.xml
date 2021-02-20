@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_head_bg_color"
+    tools:context=".fragments.AlbumsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_library_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_medium"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/album_library_header_text"
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@android:color/darker_gray" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp">
+        <!-- sort albums by button -->
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/sort_by_button_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_round"
+            app:mrl_rippleColor="@color/colorPrimaryDark"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="20dp">
+
+            <ImageView
+                android:id="@+id/sortAlbumsByButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:contentDescription="@string/no_content_description"
+                android:focusable="true"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:text="@string/sort_albums_by_button_text"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/searchAlbumsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_round"
+            app:mrl_rippleColor="@color/colorPrimaryDark"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="@string/no_content_description"
+                android:focusable="true"
+                android:padding="4dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_albums_recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_header" />
+
+    <ProgressBar
+        android:id="@+id/loader_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/error_found_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/lato_medium"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/no_album_found_label_text"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/not_found_item_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_album_fab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/go_to_albums_text"
+        app:backgroundTint="@android:color/white"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        app:tint="@color/colorPrimaryDark" />
+
+    <!-- Sort albums by box -->
+    <RelativeLayout
+        android:id="@+id/sort_albums_by_categories_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_head_bg_color"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/album_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                android:padding="8dp"
+                android:theme="@style/Theme.MaterialComponents.DayNight" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_albums_category_recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_albums_by_category_found_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/lato_medium"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/sort_albums_by_category_head_text"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/not_found_item_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/closeSortAlbumsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_round"
+            app:mrl_rippleColor="@color/colorPrimaryDark"
+            app:mrl_rippleHover="true"
+            app:mrl_rippleOverlay="true"
+            app:mrl_rippleRoundedCorners="20dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/back_to_library_button_text"
+                android:textColor="@color/color_new_album"
+                android:textStyle="bold" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </RelativeLayout>
+
+    <!-- search albums box -->
+    <RelativeLayout
+        android:id="@+id/search_albums_box_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_head_bg_color"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/search_box_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/album_name_search_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="none"
+                    android:background="@color/white"
+                    android:fontFamily="@font/lato_medium"
+                    android:hint="@string/album_name_edit_text"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/edit_text_color" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/closeSearchAlbumsBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/button_round"
+                app:mrl_rippleColor="@color/colorPrimaryDark"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_rippleRoundedCorners="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@string/no_content_description"
+                    android:focusable="true"
+                    android:padding="4dp"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textStyle="bold" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_found_tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_box_input"
+            android:layout_centerInParent="true"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/lato_medium"
+            android:padding="8dp"
+            android:text="@string/find_album_by_name_text"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/not_found_item_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/albums_recycler_list_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/error_found_tv_2"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/loader_bar_for_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

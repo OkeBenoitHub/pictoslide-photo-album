@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/draw_on_photo"
+        android:title="@string/draw_on_photo_menu_text" />
+    <item
+        android:id="@+id/eraser"
+        android:title="@string/erase_menu_text" />
+    <item
+        android:id="@+id/set_filter"
+        android:title="@string/set_filter_menu_text" />
+    <item
+        android:id="@+id/insert_text"
+        android:title="@string/insert_text_menu_text" />
+    <item
+        android:id="@+id/undo_changes"
+        android:title="@string/undo_all_changes_menu_text" />
+</menu>
